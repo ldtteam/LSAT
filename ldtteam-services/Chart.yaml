@@ -1,0 +1,6 @@
+apiVersion: v2
+name: ldtteam-services
+description: Helm ArgoCD Services Specification for the LDTTeam
+type: application
+version: 1.0.0
+appVersion: "1.0.0"

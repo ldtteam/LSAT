@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: donator-auth
+  namespace: argocd
+spec:
+  project: ldtteam
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: donator-auth
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+  sources:
+    - repoURL: https://ldtteam.github.io/authentication
+      chart: ldtteam-authentication-server
+      targetRevision: "0.5.*"
+      helm:
+        releaseName: donator-auth
+
+    - repoURL: {{ .Values.repository.url }}
+      path: ldtteam-charts/donator-auth-extras
+      targetRevision: HEAD
+      helm:

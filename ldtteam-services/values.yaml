@@ -1,0 +1,3 @@
+repository:
+  # This needs to point to the active remote for the Andromeda GitHub repository so that the ArgoCD Application can pull the latest version of this system.
+  url: https://github.com/ldtteam/Andromeda
