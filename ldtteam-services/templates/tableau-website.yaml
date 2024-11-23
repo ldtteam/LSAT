@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ldtteam-tableau
+  namespace: argocd
+spec:
+  project: ldtteam
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: ldtteam-tableau
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+  sources:
+    - repoURL: https://ldtteam.github.io/Tableau
+      chart: tableau
+      targetRevision: "0.*"
+      helm:
+        releaseName: ldtteam-tableau
