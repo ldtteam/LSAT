@@ -24,7 +24,7 @@ spec:
             hostname: auth-ha.minecolonies.com
           postgresql:
             enabled: false
-          postgreshq:
+          postgresha:
             enabled: true
 
     - repoURL: {{ .Values.repository.url }}
