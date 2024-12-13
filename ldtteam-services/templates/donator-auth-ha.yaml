@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: donator-auth-ha
+  namespace: argocd
+spec:
+  project: ldtteam
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: minecolonies-donator-auth
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+  sources:
+    - repoURL: https://ldtteam.github.io/authentication
+      chart: ldtteam-authentication-server
+      targetRevision: "0.5.*"
+      helm:
+        releaseName: donator-auth
+        valuesObject:
+          ingress:
+            hostname: auth-ha.minecolonies.com
+          postgresql:
+            enabled: false
+          postgreshq:
+            enabled: true
+
+    - repoURL: {{ .Values.repository.url }}
+      path: ldtteam-charts/donator-auth-extras
+      targetRevision: HEAD
+      helm:
