@@ -6,5 +6,9 @@
         "ghcr.io/gickis/devcontainer-features/kubeseal:1": {
             "version": "latest"
         }
-    }
+    },
+
+    "mounts": [
+        "source=${env:HOME}${env:USERPROFILE}/.kube,target=/usr/local/share/kube-localhost,type=bind"
+    ]
 }

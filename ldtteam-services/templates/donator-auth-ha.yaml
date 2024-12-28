@@ -35,6 +35,6 @@ spec:
             enabled: true
 
     - repoURL: {{ .Values.repository.url }}
-      path: ldtteam-charts/donator-auth-extras
+      path: ldtteam-charts/donator-auth-ha-extras
       targetRevision: HEAD
       helm:

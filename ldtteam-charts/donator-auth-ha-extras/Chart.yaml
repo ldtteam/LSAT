@@ -1,0 +1,5 @@
+apiVersion: v2
+name: donator-auth-ha-extras
+description: The additional resources for donator-auth-ha
+type: application
+version: 1.0.0
