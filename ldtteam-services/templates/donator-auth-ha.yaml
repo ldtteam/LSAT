@@ -23,6 +23,8 @@ spec:
           replicaCount: 0
           ingress:
             hostname: auth-ha.minecolonies.com
+            annotations:
+              external-dns.alpha.kubernetes.io/target: cluster.ldtteam.com
           environment:
             LDTTEAM_AUTH_ConnectionStrings__postgres: Server=donator-auth-postgresha-pgpool.mineclonies-donator-auth.svc.cluster.local;Port=5432;User Id=postgres;Password=DonatorAuth1!;Database=authentication;
             LDTTEAM_AUTH_ConnectionStrings__postgres_github: Server=donator-auth-postgresha-pgpool.mineclonies-donator-auth.svc.cluster.local;Port=5432;User Id=postgres;Password=DonatorAuth1!;Database=github;
