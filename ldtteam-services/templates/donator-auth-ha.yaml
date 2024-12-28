@@ -25,10 +25,7 @@ spec:
           postgresql:
             enabled: false
           postgresha:
-            enabled: true
-            persistence:
-              accessModes:
-              - ReadWriteMany
+            enabled: false
 
     - repoURL: {{ .Values.repository.url }}
       path: ldtteam-charts/donator-auth-extras
