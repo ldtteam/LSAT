@@ -20,7 +20,7 @@ spec:
       helm:
         releaseName: donator-auth
         valuesObject:
-          replicaCount: 0
+          replicaCount: 1
           ingress:
             hostname: auth-ha.minecolonies.com
             annotations:
