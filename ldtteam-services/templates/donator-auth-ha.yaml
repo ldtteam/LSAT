@@ -24,9 +24,9 @@ spec:
           ingress:
             hostname: auth-ha.minecolonies.com
           environment:
-            LDTTEAM_AUTH_ConnectionStrings__postgres: Server=donator-auth-postgresha-pgpool.mineclonies-donator-auth.svc.cluster.local;Port=5432;User Id=ldtteam-donator-auth;Password=DonatorAuth1!;Database=authentication;
-            LDTTEAM_AUTH_ConnectionStrings__postgres_github: Server=donator-auth-postgresha-pgpool.mineclonies-donator-auth.svc.cluster.local;Port=5432;User Id=ldtteam-donator-auth;Password=DonatorAuth1!;Database=github;
-            LDTTEAM_AUTH_ConnectionStrings__postgres_patreon: Server=donator-auth-postgresha-pgpool.mineclonies-donator-auth.svc.cluster.local;Port=5432;User Id=ldtteam-donator-auth;Password=DonatorAuth1!;Database=patreon;
+            LDTTEAM_AUTH_ConnectionStrings__postgres: Server=donator-auth-postgresha-pgpool.mineclonies-donator-auth.svc.cluster.local;Port=5432;User Id=postgres;Password=DonatorAuth1!;Database=authentication;
+            LDTTEAM_AUTH_ConnectionStrings__postgres_github: Server=donator-auth-postgresha-pgpool.mineclonies-donator-auth.svc.cluster.local;Port=5432;User Id=postgres;Password=DonatorAuth1!;Database=github;
+            LDTTEAM_AUTH_ConnectionStrings__postgres_patreon: Server=donator-auth-postgresha-pgpool.mineclonies-donator-auth.svc.cluster.local;Port=5432;User Id=postgres;Password=DonatorAuth1!;Database=patreon;
           postgresql:
             enabled: false
           postgresha:
