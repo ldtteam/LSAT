@@ -30,7 +30,7 @@ spec:
           postgresql:
             enabled: false
           postgresha:
-            enabled: true
+            enabled: false
 
     - repoURL: {{ .Values.repository.url }}
       path: ldtteam-charts/donator-auth-extras
