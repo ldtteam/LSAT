@@ -17,6 +17,5 @@ spec:
   template:
     metadata:
       name: donator-auth-ldtteam-authentication-server
-      namespace: donator-auth
       labels:
         app.kubernetes.io/part-of: donator-auth
