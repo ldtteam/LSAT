@@ -9,6 +9,6 @@
     },
 
     "mounts": [
-        "source=${env:HOME}${env:USERPROFILE}/.kube,target=/usr/local/share/kube-localhost,type=bind"
+        "source=${env:HOME}${env:USERPROFILE}/.kube,target=/home/vscode/.kube,type=bind"
     ]
 }
