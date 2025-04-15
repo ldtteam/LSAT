@@ -124,8 +124,5 @@ fi
 mkdir -p "${TEMPLATE_DIR}"
 
 # Create the secret file
-echo "Creating secret file ${SECRET_FILE} for ${SERVICE_NAME} in namespace ${SERVICE_NAMESPACE}."
-echo "Using the following kubectl command:"
-echo "kubectl create secret generic -n ${SERVICE_NAMESPACE} --dry-run=client $FROM_LITERAL -o yaml ${SECRET_NAME} | kubeseal --format yaml > ${SECRET_FILE}"
-
+echo "Updating secret file ${SECRET_FILE} for ${SERVICE_NAME} in namespace ${SERVICE_NAMESPACE}."
 kubectl create secret generic -n "${SERVICE_NAMESPACE}" "${SECRET_NAME}" --dry-run=client $FROM_LITERAL -o yaml | kubeseal --format yaml --merge-into "$SECRET_FILE"
