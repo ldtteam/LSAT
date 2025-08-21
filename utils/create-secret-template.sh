@@ -5,7 +5,7 @@
 # - Service name. Supported are the values for which a "-extras" directory exists within the service type directory
 # - Secret name.
 # - Secret key.
-# Example: ./create-secret-template.sh core prometheus github-client
+# Example: ./create-secret-template.sh core prometheus github-client client-id
 # The secret value is then read from STDIN and the secret file is output to the target directory for the service.
 
 # Set up variables
@@ -35,15 +35,15 @@ FROM_LITERAL=""
 
 # If neither secret name nor key is provided, ask for key-value pairs
 # Check for additional parameters beyond the initial four
-if [ $# -gt 3 ]; then
+if [ $# -gt 4 ]; then
     # Ensure an even number of additional parameters for key-value pairs
-    if [ $(( ($# - 3) % 2 )) -ne 0 ]; then
+    if [ $(( ($# - 4) % 2 )) -ne 0 ]; then
         echo "Error: Missing value for the last secret key."
         exit 5
     fi
 
     # Process additional key-value pairs
-    for (( i=4; i<=$#; i+=2 ))
+    for (( i=5; i<=$#; i+=2 ))
     do
         KEY=${!i}
         let "VAL_INDEX = i + 1"

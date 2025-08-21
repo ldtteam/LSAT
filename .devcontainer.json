@@ -1,14 +1,16 @@
 {
-    "image":"mcr.microsoft.com/devcontainers/base:ubuntu",
-
-    "features": {
-        "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
-        "ghcr.io/gickis/devcontainer-features/kubeseal:1": {
-            "version": "latest"
-        }
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+    "ghcr.io/larsnieuwenhuizen/features/jqyq:0": {},
+    "ghcr.io/gickis/devcontainer-features/kubeseal:1": {
+      "version": "latest"
     },
-
-    "mounts": [
-        "source=${env:HOME}${env:USERPROFILE}/.kube,target=/home/vscode/.kube,type=bind"
-    ]
+    "ghcr.io/ldtteam/receptacula/rancher-cli:latest": {
+      "version": "latest"
+    }
+  },
+  "mounts": [
+    "source=${env:HOME}${env:USERPROFILE}/.kube,target=/home/vscode/.kube,type=bind"
+  ]
 }
