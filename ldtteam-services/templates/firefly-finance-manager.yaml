@@ -24,6 +24,9 @@ spec:
             storage:
               accessModes: ReadWriteOnce
               dataSize: 20Gi
+            backup:
+              pvc:
+                dataSize: 20Gi
 
           firefly-iii:
             config:
