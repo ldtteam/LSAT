@@ -14,11 +14,11 @@ spec:
     syncOptions:
       - CreateNamespace=true
   sources:
-    - repoURL: https://ldtteam.github.io/Tableau
-      chart: tableau
+    - repoURL: https://firefly-iii.github.io/kubernetes/
+      chart: firefly-iii-stack
       targetRevision: "0.*"
       helm:
-        releaseName: ldtteam-tableau
+        releaseName: ldtteam-finance-manager
         valuesObject:
           firefly-db:
             storage:
