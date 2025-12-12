@@ -57,6 +57,8 @@ spec:
                 LoggingChannel: 867386116490920000
           postgresha:
             enabled: true
+          postgresql:
+            enabled: false
 
     - repoURL: {{ .Values.repository.url }}
       path: ldtteam-charts/donator-auth-ha-extras
