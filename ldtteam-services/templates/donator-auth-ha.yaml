@@ -55,7 +55,6 @@ spec:
                   - 472879389063905300
                 RemoveUsersFromRoles: true
                 LoggingChannel: 867386116490920000
-
           postgresha:
             enabled: true
 
