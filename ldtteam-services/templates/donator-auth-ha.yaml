@@ -22,7 +22,6 @@ spec:
         valuesObject:
           fullnameOverride: donator-auth
           nameOverride: donator-auth
-          replicaCount: 0
           ingress:
             hostname: auth-ha.minecolonies.com
             annotations:
