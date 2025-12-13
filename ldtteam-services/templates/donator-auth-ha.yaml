@@ -23,7 +23,7 @@ spec:
           fullnameOverride: donator-auth
           nameOverride: donator-auth
           ingress:
-            hostname: auth-ha.minecolonies.com
+            hostname: auth.minecolonies.com
             annotations:
               external-dns.alpha.kubernetes.io/target: cluster.ldtteam.com
           app:
