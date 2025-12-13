@@ -28,6 +28,7 @@ spec:
             annotations:
               external-dns.alpha.kubernetes.io/target: cluster.ldtteam.com
           app:
+            opssecret: donator-auth-ldtteam-authentication-server
             config:
               GitHub:
                 ClientId: Iv1.1dd3379574845528
