@@ -48,7 +48,7 @@ spec:
                 ClientId: '867378591817400330'
                 Server:
                   DisplayName: Minecolonies Insights
-                  Id: 472875599422291968
+                  Id: "472875599422291968"
                 LoggingChannel: auth-service
                 RoleMappings:
                   '472875599422291968':
