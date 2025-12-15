@@ -26,6 +26,10 @@ spec:
             hostname: auth.minecolonies.com
             annotations:
               external-dns.alpha.kubernetes.io/target: cluster.ldtteam.com
+          discordBot:
+            enabled: true
+          rewardsService:
+            enabled: true
           app:
             opssecret: donator-auth-ldtteam-authentication-server
             config:
@@ -42,6 +46,10 @@ spec:
                 ClientId: c44fb555-70db-4457-92f7-78309c6e62b8
               Discord:
                 ClientId: '867378591817400330'
+                Server:
+                  DisplayName: Minecolonies Insights
+                  Id: 472875599422291968
+                LoggingChannel: auth-service
                 RoleMappings:
                   '472875599422291968':
                     discord-role:
@@ -56,7 +64,6 @@ spec:
                   - 240844823823646720
                   - 472879389063905300
                 RemoveUsersFromRoles: true
-                LoggingChannel: 867386116490920000
           postgresha:
             enabled: true
           postgresql:
