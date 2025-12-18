@@ -38,10 +38,8 @@ spec:
                 ApplicationId: 127714
                 Organisation: ldtteam
               Patreon:
-                ClientId: vczZ_-e9ZkZ8dF5d-0ely8pL0yMq5U2wNq_-mCPiMCfsDpJjfY7XJdLreqbjqKu6
-                ApiClientId: uWqCHPyalFE27zDU_OU87INED-_GUxpfm5vpSO9xpO9jTqJSOjABUt9IVJsissGQ
+                ClientId: SDpMlvqTUOBRHxk7WLxjrZYw__tC-wpNTvdBg-pnIHv3Z1y4FeuOfpFLB4zvccSX
                 CampaignId: 355933
-                NormalizeDollarsToEuros: true
               Minecraft:
                 ClientId: c44fb555-70db-4457-92f7-78309c6e62b8
               Discord:
@@ -52,20 +50,6 @@ spec:
                 LoggingChannel:
                   Server: Minecolonies Insights
                   Channel: auth-service
-                RoleMappings:
-                  '472875599422291968':
-                    discord-role:
-                      - 472879389063905300
-                      - 937834890613899300
-                  '139070364159311872':
-                    discord-role:
-                      - 835040295850344400
-                      - 240844823823646720
-                      - 835041474462351400
-                OptionalRoles:
-                  - 240844823823646720
-                  - 472879389063905300
-                RemoveUsersFromRoles: true
           postgresha:
             enabled: true
           postgresql:
