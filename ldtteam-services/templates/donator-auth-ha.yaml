@@ -36,6 +36,8 @@ spec:
             enabled: true
           patreonWebhookService:
             enabled: true
+          rewardApiService:
+            enabled: true
           app:
             opssecret: donator-auth-ldtteam-authentication-server
             config:
