@@ -23,6 +23,11 @@ spec:
           replicaCount: 0
           ingress:
             enabled: false
+          ingressPatreonWebhook:
+            enabled: false
+          ingressRewardApi:
+            enabled: false
+
 
     - repoURL: {{ .Values.repository.url }}
       path: ldtteam-charts/donator-auth-extras
