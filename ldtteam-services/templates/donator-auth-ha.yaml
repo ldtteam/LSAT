@@ -57,6 +57,8 @@ spec:
                 Server:
                   'Minecolonies Insights':
                     Id: "472875599422291968"
+                  'MineColonies':
+                    Id: "139070364159311872"
                 LoggingChannel:
                   Server: Minecolonies Insights
                   Channel: auth-service
